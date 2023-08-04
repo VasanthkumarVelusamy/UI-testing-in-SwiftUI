@@ -135,4 +135,55 @@ final class UserInterfaceTestUITests: XCTestCase {
         XCTAssert(app.staticTexts["Welcome test"].exists)
     }
     
+    func testLoginLogoutLabel() throws {
+        XCTAssertEqual(app.buttons["loginButton"].label, "Login")
+     
+        try login()
+     
+        XCTAssertEqual(app.buttons["loginButton"].label, "Logout")
+    }
+    
+    func testLogout() throws {
+        try login()
+        
+        XCTAssert(app.staticTexts["Welcome test"].exists)
+        XCTAssertEqual(app.buttons["loginButton"].label, "Logout")
+        
+        app.buttons["loginButton"].tap()
+        XCTAssert(app.staticTexts["Welcome"].exists)
+        XCTAssertEqual(app.buttons["loginButton"].label, "Login")
+    }
+    
+    func testColorTheme() throws {
+        try login()
+     
+        let colorTheme = app.segmentedControls["colorTheme"]
+        XCTAssert(colorTheme.exists)
+        XCTAssert(colorTheme.buttons["Light"].isSelected)
+     
+        colorTheme.buttons["Dark"].tap()
+        XCTAssert(colorTheme.buttons["Dark"].isSelected)
+    }
+    
+    func testTextSize() throws {
+        try login()
+     
+        let textSize = app.sliders["slider"]
+        XCTAssert(textSize.exists)
+     
+        textSize.adjust(toNormalizedSliderPosition: 0.75)
+        XCTAssertGreaterThanOrEqual(textSize.value as! String, "0.7")
+    }
+ 
+    func testFontPicker() throws {
+        try login()
+     
+        let wheel = app.pickerWheels.element
+        XCTAssert(wheel.exists)
+        XCTAssertEqual(wheel.value as! String, "Arial")
+     
+        wheel.adjust(toPickerWheelValue: "Futura")
+        XCTAssertEqual(wheel.value as! String, "Futura")
+    }
+    
 }
