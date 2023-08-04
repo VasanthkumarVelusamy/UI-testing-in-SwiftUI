@@ -14,6 +14,8 @@
 		27B289A52A7CC75D00F8469F /* UserInterfaceTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B289A42A7CC75D00F8469F /* UserInterfaceTestTests.swift */; };
 		27B289AF2A7CC75D00F8469F /* UserInterfaceTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B289AE2A7CC75D00F8469F /* UserInterfaceTestUITests.swift */; };
 		27B289B12A7CC75D00F8469F /* UserInterfaceTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B289B02A7CC75D00F8469F /* UserInterfaceTestUITestsLaunchTests.swift */; };
+		27B289BE2A7D0B2D00F8469F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B289BD2A7D0B2D00F8469F /* User.swift */; };
+		27B289C02A7D0DA000F8469F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B289BF2A7D0DA000F8469F /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		27B289AA2A7CC75D00F8469F /* UserInterfaceTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserInterfaceTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B289AE2A7CC75D00F8469F /* UserInterfaceTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceTestUITests.swift; sourceTree = "<group>"; };
 		27B289B02A7CC75D00F8469F /* UserInterfaceTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27B289BD2A7D0B2D00F8469F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27B289BF2A7D0DA000F8469F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				27B289922A7CC75C00F8469F /* UserInterfaceTestApp.swift */,
+				27B289BF2A7D0DA000F8469F /* LoginView.swift */,
 				27B289942A7CC75C00F8469F /* ContentView.swift */,
+				27B289BD2A7D0B2D00F8469F /* User.swift */,
 				27B289962A7CC75D00F8469F /* Assets.xcassets */,
 				27B289982A7CC75D00F8469F /* UserInterfaceTest.entitlements */,
 				27B289992A7CC75D00F8469F /* Preview Content */,
@@ -261,6 +267,8 @@
 			files = (
 				27B289952A7CC75C00F8469F /* ContentView.swift in Sources */,
 				27B289932A7CC75C00F8469F /* UserInterfaceTestApp.swift in Sources */,
+				27B289C02A7D0DA000F8469F /* LoginView.swift in Sources */,
+				27B289BE2A7D0B2D00F8469F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
